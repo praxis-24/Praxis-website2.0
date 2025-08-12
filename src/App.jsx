@@ -6,7 +6,13 @@ const App = () => {
   return (
     <div>
       <Navbar />
-      <Heropage />
+      <div className="max-w-[1200px] mx-auto p-4 grid grid-cols-3 gap-5 max-md:grid-cols-1">
+        <Heropage />
+        <Heropage />
+        <Heropage />
+        <Heropage />
+        <Heropage />
+      </div>
     </div>
   );
 };
