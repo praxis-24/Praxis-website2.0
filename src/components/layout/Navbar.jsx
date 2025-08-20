@@ -1,10 +1,13 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { scrollToSection } from "../../utils/scrollUtils";
+import { useScrollPosition } from "../../hooks/useScrollPosition";
 
 const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const navigate = useNavigate();
+  const scrollPosition = useScrollPosition();
+  const showGetStarted = scrollPosition > window.innerHeight * 0.7;
 
   const handleNavClick = (e, sectionId) => {
     e.preventDefault();
@@ -28,7 +31,7 @@ const Navbar = () => {
             <a href="#contact" onClick={(e) => handleNavClick(e, 'contact')} className="text-neutral-content hover:text-primary transition-colors font-medium">Contact</a>
           </div>
 
-          <div className="hidden md:block">
+          <div className={`hidden md:block transition-opacity duration-300 ${showGetStarted ? 'opacity-100' : 'opacity-0'}`}>
             <button className="btn btn-primary">
               Get Started
             </button>
@@ -53,7 +56,7 @@ const Navbar = () => {
           <a href="#about" onClick={(e) => handleNavClick(e, 'about')} className="block text-neutral-content hover:text-primary transition-colors font-medium">About</a>
           <a href="#services" onClick={(e) => handleNavClick(e, 'services')} className="block text-neutral-content hover:text-primary transition-colors font-medium">Services</a>
           <a href="#contact" onClick={(e) => handleNavClick(e, 'contact')} className="block text-neutral-content hover:text-primary transition-colors font-medium">Contact</a>
-          <button className="btn btn-primary w-full">
+          <button className={`btn btn-primary w-full transition-opacity duration-300 ${showGetStarted ? 'opacity-100' : 'opacity-0'}`}>
             Get Started
           </button>
         </div>
