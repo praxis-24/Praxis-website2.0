@@ -2,7 +2,7 @@ import React from "react";
 
 const Heropage = () => {
   return (
-    <div className="min-h-screen flex items-center bg-base-100">
+    <div id="home" className="min-h-screen flex items-center bg-base-100">
       <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-8">
         <div className="flex flex-col justify-center">
           <p className="text-primary uppercase font-bold tracking-wide mb-4">

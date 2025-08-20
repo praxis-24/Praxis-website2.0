@@ -50,7 +50,7 @@ const ServicesSection = () => {
   ];
 
   return (
-    <section className="w-screen bg-gray-50 py-24">
+    <section id="services" className="w-screen bg-gray-50 py-24">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-6 max-sm:text-3xl text-gray-900">Our Services</h2>

@@ -1,21 +1,31 @@
 import { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { scrollToSection } from "../../utils/scrollUtils";
 
 const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const navigate = useNavigate();
+
+  const handleNavClick = (e, sectionId) => {
+    e.preventDefault();
+    navigate('/');
+    setTimeout(() => scrollToSection(sectionId), 100);
+    setMobileMenuOpen(false);
+  };
 
   return (
     <nav className="fixed top-0 left-0 w-full z-50 bg-black/80 backdrop-blur-sm shadow-md">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
-          <a href="#" className="text-2xl font-bold text-primary">
+          <Link to="/" className="text-2xl font-bold text-primary">
             Praxis
-          </a>
+          </Link>
           
           <div className="hidden md:flex items-center space-x-8">
-            <a href="#" className="text-neutral-content hover:text-primary transition-colors font-medium">Home</a>
-            <a href="#" className="text-neutral-content hover:text-primary transition-colors font-medium">About</a>
-            <a href="#" className="text-neutral-content hover:text-primary transition-colors font-medium">Services</a>
-            <a href="#" className="text-neutral-content hover:text-primary transition-colors font-medium">Contact</a>
+            <Link to="/" className="text-neutral-content hover:text-primary transition-colors font-medium">Home</Link>
+            <a href="#about" onClick={(e) => handleNavClick(e, 'about')} className="text-neutral-content hover:text-primary transition-colors font-medium">About</a>
+            <a href="#services" onClick={(e) => handleNavClick(e, 'services')} className="text-neutral-content hover:text-primary transition-colors font-medium">Services</a>
+            <a href="#contact" onClick={(e) => handleNavClick(e, 'contact')} className="text-neutral-content hover:text-primary transition-colors font-medium">Contact</a>
           </div>
 
           <div className="hidden md:block">
@@ -39,10 +49,10 @@ const Navbar = () => {
         mobileMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0 overflow-hidden'
       }`}>
         <div className="container mx-auto px-4 py-4 space-y-4">
-          <a href="#" className="block text-neutral-content hover:text-primary transition-colors font-medium">Home</a>
-          <a href="#" className="block text-neutral-content hover:text-primary transition-colors font-medium">About</a>
-          <a href="#" className="block text-neutral-content hover:text-primary transition-colors font-medium">Services</a>
-          <a href="#" className="block text-neutral-content hover:text-primary transition-colors font-medium">Contact</a>
+          <Link to="/" className="block text-neutral-content hover:text-primary transition-colors font-medium">Home</Link>
+          <a href="#about" onClick={(e) => handleNavClick(e, 'about')} className="block text-neutral-content hover:text-primary transition-colors font-medium">About</a>
+          <a href="#services" onClick={(e) => handleNavClick(e, 'services')} className="block text-neutral-content hover:text-primary transition-colors font-medium">Services</a>
+          <a href="#contact" onClick={(e) => handleNavClick(e, 'contact')} className="block text-neutral-content hover:text-primary transition-colors font-medium">Contact</a>
           <button className="btn btn-primary w-full">
             Get Started
           </button>

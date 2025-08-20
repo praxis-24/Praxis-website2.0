@@ -24,6 +24,10 @@ a:hover {
   color: #b9b9b9;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   display: flex;

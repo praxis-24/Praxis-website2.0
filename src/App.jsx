@@ -1,21 +1,16 @@
+import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/layout/Navbar";
 import Footer from "./components/layout/Footer";
-import Hero from "./components/sections/Hero";
-import About from "./components/sections/About";
-import Services from "./components/sections/Services";
-import Testimonials from "./components/sections/Testimonials";
+import Home from "./pages/Home";
 import "./App.css";
 
 const App = () => {
   return (
     <div className="min-h-screen overflow-x-hidden">
       <Navbar />
-      <div className="container mx-auto px-4">
-        <Hero />
-      </div>
-      <About />
-      <Services />
-      <Testimonials />
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
       <Footer />
     </div>
   );
