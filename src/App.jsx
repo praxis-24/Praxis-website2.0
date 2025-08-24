@@ -1,13 +1,17 @@
-import Navbar from "./assets/components/navbar";
-import Heropage from "./assets/components/heropage";
+import { Routes, Route } from "react-router-dom";
+import Navbar from "./components/layout/Navbar";
+import Footer from "./components/layout/Footer";
+import Home from "./pages/Home";
 import "./App.css";
 
 const App = () => {
   return (
-    <div>
+    <div className="min-h-screen overflow-x-hidden">
       <Navbar />
-      <div className="max-w-[1200px] mx-auto p-4 grid grid-cols-3 gap-5 max-md:grid-cols-1"></div>
-      <Heropage />
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
+      <Footer />
     </div>
   );
 };
