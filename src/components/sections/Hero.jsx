@@ -1,4 +1,5 @@
 import React from "react";
+import HeroImg from "../../assets/heroImage.png";
 
 const Heropage = () => {
   return (
@@ -12,18 +13,23 @@ const Heropage = () => {
             Building Digital Solutions for Tomorrow
           </h1>
           <p className="text-lg text-gray-600 mb-8">
-            We create innovative digital solutions that help businesses thrive in the modern world. 
-            Our expertise spans web development, mobile apps, and digital transformation.
+            We create innovative digital solutions that help businesses thrive
+            in the modern world. Our expertise spans web development, mobile
+            apps, and digital transformation.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4">
+          <div className="flex flex-col justify-center sm:flex-row gap-4">
             <button className="btn btn-primary">Get Started</button>
             <button className="btn btn-outline">Learn More</button>
           </div>
         </div>
         <div className="hidden md:flex items-center justify-center">
-          <div className="bg-base-200 w-full aspect-square rounded-xl shadow-lg">
+          <div className="bg-base-200 w-full aspect-square rounded-xl shadow-none">
             <div className="w-full h-full flex items-center justify-center text-base-content/50">
-              Image Placeholder
+              <img
+                src={HeroImg}
+                alt="Hero"
+                className="max-w-full h-auto rounded-xl"
+              />
             </div>
           </div>
         </div>
