@@ -1,3 +1,5 @@
+import LogoImg from "../../assets/logoImage.png";
+
 const About = () => {
   return (
     <section id="about" className="w-screen bg-base-100 py-24">
@@ -11,8 +13,11 @@ const About = () => {
           {/* Content side */}
           <div className="space-y-6">
             <h2 className="text-4xl font-bold">About Praxis</h2>
-            <p className="text-lg text-base-content/80">
-              We are a passionate team of digital innovators, dedicated to transforming ideas into powerful digital solutions. With years of experience and a commitment to excellence, we help businesses navigate the digital landscape.
+            <p className="text-lg text-base-content/80  text-gray-600">
+              We are a passionate team of digital innovators, dedicated to
+              transforming ideas into powerful digital solutions. With years of
+              experience and a commitment to excellence, we help businesses
+              navigate the digital landscape.
             </p>
             <div className="grid grid-cols-2 gap-6">
               <div className="space-y-2">

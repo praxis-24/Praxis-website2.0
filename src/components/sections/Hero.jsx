@@ -9,7 +9,7 @@ const Heropage = () => {
           <p className="text-primary uppercase font-bold tracking-wide mb-4">
             Transforming Ideas into Reality
           </p>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6  text-gray-600">
             Building Digital Solutions for Tomorrow
           </h1>
           <p className="text-lg text-gray-600 mb-8">
