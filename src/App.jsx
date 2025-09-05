@@ -6,7 +6,7 @@ import "./App.css";
 
 const App = () => {
   return (
-    <div className="min-h-screen overflow-x-hidden">
+    <div className="min-h-screen overflow-x-hidden bg-base-100 text-base-content">
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />

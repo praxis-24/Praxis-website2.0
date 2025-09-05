@@ -23,11 +23,11 @@ const TestimonialSection = () => {
   ];
 
   return (
-    <section className="w-screen bg-white py-24">
+    <section className="w-screen bg-base-100 py-24">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-6 max-sm:text-3xl text-gray-900">What Our Clients Say</h2>
-          <p className="text-gray-600 max-w-2xl mx-auto text-lg">
+          <h2 className="text-4xl font-bold mb-6 max-sm:text-3xl text-base-content">What Our Clients Say</h2>
+          <p className="text-base-content/70 max-w-2xl mx-auto text-lg">
             Don't just take our word for it - hear from some of our satisfied clients about their experience working with us.
           </p>
         </div>

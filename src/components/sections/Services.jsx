@@ -50,11 +50,11 @@ const ServicesSection = () => {
   ];
 
   return (
-    <section id="services" className="w-screen bg-gray-50 py-24">
+    <section id="services" className="w-screen bg-base-200 py-24">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-6 max-sm:text-3xl text-gray-900">Our Services</h2>
-          <p className="text-gray-600 max-w-2xl mx-auto text-lg">
+          <h2 className="text-4xl font-bold mb-6 max-sm:text-3xl text-base-content">Our Services</h2>
+          <p className="text-base-content/70 max-w-2xl mx-auto text-lg">
             We offer a comprehensive range of digital solutions to help your business thrive in the modern world.
           </p>
         </div>
